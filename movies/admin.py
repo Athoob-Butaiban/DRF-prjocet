@@ -4,4 +4,4 @@ from movies.models import Movie, Booking
 
 to_register = [ Movie, Booking,]
 
-admin.site.reqister(to_register)
+admin.site.register(to_register)
