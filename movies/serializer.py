@@ -60,5 +60,7 @@ class LoginSerializer(serializers.ModelSerializer):
 
         return token
 
-class LogoutSerializer(serializers.ModelSerializer):
-    
+class ListSerializer(serializers.ModelSerializer): # need permission
+    class Meta:
+        model = Movie
+        fields = ["name", "date"]
