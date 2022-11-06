@@ -31,7 +31,16 @@ class LoginView(APIView):
         else:
             return Response(serializer.errors, HTTP_400_BAD_REQUEST)
 
-
 class ListView(APIView):
     serializer_class = serializer.ListSerializer
     permission_classes = [Authenticated] 
+
+class Add(CreateAPIView):
+    serializer_class = serializer.MovieSerSerializer
+    parser_classes = [IsAuthenticated]
+    '''
+    def poat(self,):
+        movie.append()
+        
+
+    '''
